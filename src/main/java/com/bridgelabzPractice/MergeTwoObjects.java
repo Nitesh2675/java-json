@@ -3,11 +3,11 @@ package com.bridgelabzPractice;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
-class Student{
+class Students{
     public String name;
     public int age;
 
-    public Student(String name, int age) {
+    public Students(String name, int age) {
         this.name = name;
         this.age = age;
     }
@@ -17,8 +17,8 @@ class Student{
 
 public class MergeTwoObjects {
     public static void main(String[] args) throws  Exception{
-        Student student1=new Student("Nitesh",19);
-        Student student2=new Student("Dhruv",20);
+        Students student1=new Students("Nitesh",19);
+        Students student2=new Students("Dhruv",20);
         ObjectMapper mapper=new ObjectMapper();
         ObjectNode combined = mapper.createObjectNode();
         combined.set("student1", mapper.valueToTree(student1));
